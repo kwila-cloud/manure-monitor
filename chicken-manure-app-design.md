@@ -1,13 +1,6 @@
 # Manure Monitor: Manure Management System
 Design Document
 
-*Alternative names under consideration:*
-- SpreadWise
-- SmartSpread Pro
-- PrecisionSpread
-- AgriSpread
-- FieldSpread
-
 ## Overview
 This document outlines the design for a multi-tenant mobile/web application that will automate the tracking and calculation of chicken manure spreading across multiple farms and fields. Each customer organization will have their own isolated SQLite database instance, with separate user accounts, farms, and field data.
 
@@ -263,7 +256,7 @@ Load
 
 ## Implementation Phases
 
-### Phase 1: Core Functionality with SQLite (3 months)
+### Phase 1: Core Functionality with SQLite
 - Set up SQLite database schema
 - Implement local-first architecture
 - User, farm, and field management
@@ -273,7 +266,7 @@ Load
 - Basic synchronization mechanism
 - Web dashboard for administration
 
-### Phase 2: Enhanced Sync and Features (2 months)
+### Phase 2: Enhanced Sync and Features
 - Robust synchronization with conflict resolution
 - Advanced reporting and analytics
 - Data visualization (charts, graphs)
@@ -281,7 +274,7 @@ Load
 - Sync status monitoring and management
 - API integrations (if applicable)
 
-### Phase 3: Optimization (2 months)
+### Phase 3: Optimization
 - Performance improvements for SQLite operations
 - Sync efficiency enhancements
 - User feedback incorporation
