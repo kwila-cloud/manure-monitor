@@ -149,7 +149,7 @@ Load
 - Regular local backups to prevent data loss
 
 ### Synchronization Layer
-- RESTful API for data synchronization
+- FastAPI RESTful API for data synchronization
 - Timestamp-based change tracking
 - Conflict detection and resolution logic
 - Efficient data transfer (only changed records)
@@ -157,18 +157,20 @@ Load
 - Central server for data aggregation and storage
 
 ### Frontend
-- Progressive Web App (PWA) for cross-platform compatibility
-- Responsive design for mobile and desktop use
-- Offline capability with local storage
+- Flutter app for cross-platform compatibility (iOS, Android, Web)
+- Responsive design optimized for mobile use in field conditions
+- Offline capability with local SQLite storage
 - Simple, high-contrast UI for outdoor visibility
-- Local data caching
+- Local data caching and background sync
+- Platform-specific optimizations for performance
 
 ### Backend
-- Lightweight API server for synchronization
+- FastAPI for high-performance API server
 - Authentication using JWT tokens with offline capability
-- Central SQLite or PostgreSQL database for aggregation
+- Central PostgreSQL database for aggregation
 - Scheduled backups of central database
-- Support for limited concurrent connections (up to 6)
+- Async support for efficient handling of concurrent connections
+- Automatic API documentation with Swagger UI
 
 ### Integration Points
 - Weather API for conditions monitoring (future)
@@ -257,14 +259,14 @@ Load
 ## Implementation Phases
 
 ### Phase 1: Core Functionality with SQLite
-- Set up SQLite database schema
-- Implement local-first architecture
+- Set up SQLite database schema using sqflite
+- Implement local-first architecture with Flutter
 - User, farm, and field management
 - Basic job and load tracking
 - Simple reporting
-- Mobile app with offline capability
+- Cross-platform app with offline capability
 - Basic synchronization mechanism
-- Web dashboard for administration
+- Web admin dashboard (using Flutter Web)
 
 ### Phase 2: Enhanced Sync and Features
 - Robust synchronization with conflict resolution
@@ -282,14 +284,16 @@ Load
 - Scale integration (if available)
 - Evaluation of database scaling needs
 
-## Technologies to Consider
-- Frontend: React Native (mobile) or React (web PWA)
-- Backend: Node.js with Express
-- Database: SQLite for local storage
+## Technologies
+- Frontend: Flutter (Dart) for all platforms
+- Backend: FastAPI (Python) for high-performance backend
+- Database: SQLite for local storage (using sqflite package)
 - Sync Layer: Custom REST API with timestamp-based syncing
-- Central Storage: SQLite or PostgreSQL based on growth
-- Cloud hosting: Lightweight VPS or AWS/Azure
-- CI/CD: Jenkins or GitHub Actions
+- Central Storage: PostgreSQL for reliable central data
+- Cloud hosting: AWS/Azure with containerization
+- CI/CD: GitHub Actions with Flutter build pipelines
+- State Management: Riverpod or Bloc pattern
+- Localization: Flutter's i18n support for future expansion
 
 ## Security Considerations
 - Local data encryption for SQLite databases
