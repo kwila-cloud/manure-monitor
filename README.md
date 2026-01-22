@@ -1,4 +1,8 @@
 # Manure Monitor: Manure Management System
+
+> [!NOTE]
+> We have moved! See https://git.kwila.cloud/kwila/karriba.
+
 Design Document
 
 ## Overview
